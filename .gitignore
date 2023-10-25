@@ -1,0 +1,130 @@
+# Dependencies
+dependencies/
+# Byte-compiled / optimized Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Caches, logs, and data directories
+*.db
+*.sqlite3
+*.log
+*.tmp
+__pycache__
+logs/
+*.swp
+*.bak
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Database
+db.sqlite3
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Distribution / packaging
+.eggs/
+.build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+python-eggs/
+scripts/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff
+instance/
+.webassets-cache
+
+# Sphinx documentation
+docs/_build/
+docs/_static/
+docs/api/
+
+# PyBuilder
+target/
+
+# IPython
+profile_default/
+ipython_config.py
+
+# PyCharm
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Visual Studio Code
+.vscode/
+
+# Sublime Text
+.sublime-project
+.sublime-workspace
+
+# IntelliJ
+.idea/
+
+# Environment variables
+.env
+
+# .DS_Store (macOS)
+.DS_Store
+
+# Byte-compiled files (cython)
+*.pyc
+*.pyo
+
+# C extensions
+*.so
+
+# Distribution directories
+build/
+dist/
+*.egg-info/
+
+# MyPy
+.mypy_cache/

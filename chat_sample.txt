@@ -1,0 +1,8 @@
+Human: Hi
+Human: What can you help me with? OK
+Human: Van you list all ec2 instances?
+Human: Can you list ec2 instances with the tag bedrock? OK
+Human: Can you start the previous instance? NO Check memory
+Human: Can you start the ec2 instances with the tag bedrock? NO
+Human: How many ec2 insatnces are currently running? OK
+Human: 
