@@ -1,0 +1,18 @@
+# AWS MCP Agent - Core Dependencies
+# Simplified approach with official AWS Labs MCP servers
+
+# Web Interface
+streamlit>=1.28.0
+
+# AWS Integration
+boto3>=1.34.0
+botocore>=1.34.0
+
+# MCP Protocol
+mcp>=1.0.0
+
+# Configuration
+python-dotenv>=1.0.0
+
+# Optional: Enhanced logging
+colorlog>=6.7.0

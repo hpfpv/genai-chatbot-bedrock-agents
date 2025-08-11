@@ -1,0 +1,28 @@
+# Configuration Template for AWS Bedrock Chatbot
+# Copy this file to config.py and update with your values
+
+import os
+
+# AWS Configuration
+AWS_PROFILE = "your-aws-profile"  # Your AWS CLI profile name
+AWS_DEFAULT_REGION = "us-east-1"  # Your preferred AWS region
+BEDROCK_MODEL_ID = "anthropic.claude-v2"  # Bedrock model to use
+
+# Optional: If using assume role
+# BEDROCK_ASSUME_ROLE = "arn:aws:iam::YOUR_ACCOUNT_ID:role/your-bedrock-role"
+
+# Optional: SerpAPI key for web search functionality
+# Get your free API key from https://serpapi.com/
+SERPAPI_API_KEY = "your-serpapi-key-here"
+
+# Model Parameters
+TEMPERATURE = 0.0
+TOP_P = 0.5
+MAX_TOKENS = 2000
+
+def set_environment():
+    """Set environment variables from configuration"""
+    os.environ["AWS_PROFILE"] = AWS_PROFILE
+    os.environ["AWS_DEFAULT_REGION"] = AWS_DEFAULT_REGION
+    if 'SERPAPI_API_KEY' in globals() and SERPAPI_API_KEY != "your-serpapi-key-here":
+        os.environ["SERPAPI_API_KEY"] = SERPAPI_API_KEY

@@ -1,43 +1,15 @@
-# Dependencies
-dependencies/
-# Byte-compiled / optimized Python files
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
 
-# Caches, logs, and data directories
-*.db
-*.sqlite3
-*.log
-*.tmp
-__pycache__
-logs/
-*.swp
-*.bak
-
-# Virtual environments
-venv/
-env/
-ENV/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# Database
-db.sqlite3
-
-# Compiled source
-*.com
-*.class
-*.dll
-*.exe
-*.o
+# C extensions
 *.so
 
 # Distribution / packaging
-.eggs/
-.build/
+.Python
+build/
+develop-eggs/
 dist/
 downloads/
 eggs/
@@ -50,8 +22,16 @@ var/
 wheels/
 pip-wheel-metadata/
 share/python-wheels/
-python-eggs/
-scripts/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
 
 # Installer logs
 pip-log.txt
@@ -60,71 +40,108 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
+.nox/
 .coverage
 .coverage.*
 .cache
 nosetests.xml
 coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
 
 # Translations
 *.mo
 *.pot
 
-# Django stuff
+# Django stuff:
 *.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
-# Flask stuff
+# Flask stuff:
 instance/
 .webassets-cache
 
-# Sphinx documentation
-docs/_build/
-docs/_static/
-docs/api/
+# Scrapy stuff:
+.scrapy
 
 # PyBuilder
 target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
 
 # IPython
 profile_default/
 ipython_config.py
 
-# PyCharm
-.idea/
+# pyenv
+.python-version
 
-# Jupyter Notebook
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pypy
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMaker Studio
 .ipynb_checkpoints
 
-# Visual Studio Code
-.vscode/
-
-# Sublime Text
-.sublime-project
-.sublime-workspace
-
-# IntelliJ
-.idea/
-
-# Environment variables
+# Environments
 .env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
-# .DS_Store (macOS)
-.DS_Store
+# Spyder project settings
+.spyderproject
+.spyproject
 
-# Byte-compiled files (cython)
-*.pyc
-*.pyo
+# Rope project settings
+.ropeproject
 
-# C extensions
-*.so
+# mkdocs documentation
+/site
 
-# Distribution directories
-build/
-dist/
-*.egg-info/
-
-# MyPy
+# mypy
 .mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Configuration files with sensitive data
+config.py
+.aws/
+*.pem
+*.key
+
+# Dependencies folder (too large for git)
+dependencies/
+
+# Demo videos (too large for git)
+demo/
+*.mp4
+*.avi
+*.mov
+
+# Chat logs and samples
+chat_sample.txt
+logs/
+
+.DS_Store

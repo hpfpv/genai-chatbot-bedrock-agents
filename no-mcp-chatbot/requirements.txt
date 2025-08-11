@@ -1,0 +1,27 @@
+# AWS Bedrock Chatbot - Dependencies
+# Core AWS and AI dependencies
+boto3>=1.28.57
+botocore>=1.31.57
+awscli>=1.29.57
+
+# LangChain framework
+langchain==0.0.309
+langchain_experimental
+
+# Web interface
+streamlit>=1.28.0
+
+# Optional: Web search functionality
+google-search-results  # SerpAPI wrapper
+
+# Data processing
+pandas_datareader
+numexpr
+yfinance
+
+# Development and utilities
+IPython
+transformers
+
+# Optional: DuckDuckGo search (alternative to SerpAPI)
+duckduckgo-search
