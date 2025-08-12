@@ -345,15 +345,15 @@ class IsolatedMCPClient:
             }
         }
         
-        logger.info(f"📤 [MCP] Sending tool request to {server_name}:")
-        logger.info(f"📤 [MCP] Request: {json.dumps(tool_request, indent=2)}")
+        logger.info(f"[MCP] Sending tool request to {server_name}:")
+        logger.info(f"[MCP] Request: {json.dumps(tool_request, indent=2)}")
         
         try:
             request_json = json.dumps(tool_request) + "\n"
             process.stdin.write(request_json.encode())
             await process.stdin.drain()
             
-            logger.info(f"📤 [MCP] Request sent to {server_name}, waiting for response...")
+            logger.info(f"[MCP] Request sent to {server_name}, waiting for response...")
             
             response_line = await asyncio.wait_for(
                 process.stdout.readline(), 

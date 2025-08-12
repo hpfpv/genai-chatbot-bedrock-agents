@@ -1,5 +1,5 @@
 """
-Simple Agent - Direct Bedrock integration without LangChain complexity
+Simple Agent - Direct Bedrock integration without LangChain
 Implements the flow: User → Agent → MCP Client → MCP Server → AWS → Response
 """
 
@@ -16,7 +16,6 @@ logger = logging.getLogger(__name__)
 class SimpleAgent:
     """
     Simplified agent that directly uses Bedrock and MCP servers.
-    No LangChain complexity - just clean, direct communication.
     """
     
     def __init__(self, app_config, mcp_client, aws_session=None):
@@ -76,9 +75,9 @@ class SimpleAgent:
         
         try:
             # Step 1: Analyze user intent and determine if tools are needed
-            logger.info("🧠 Step 1: Analyzing user intent...")
+            logger.info("Step 1: Analyzing user intent...")
             intent_analysis = await self._analyze_intent(user_message)
-            logger.info(f"🧠 Intent analysis result: {intent_analysis}")
+            logger.info(f"Intent analysis result: {intent_analysis}")
             
             # Step 2: If tools are needed, execute them
             tool_results = []
@@ -223,13 +222,13 @@ Si le problème persiste, il pourrait y avoir un conflit dans l'environnement d'
     async def _analyze_intent(self, user_message: str) -> Dict[str, Any]:
         """Analyze user intent and determine what tools to use."""
         
-        logger.info(f"🧠 [INTENT] Starting intent analysis for: '{user_message}'")
+        logger.info(f"[INTENT] Starting intent analysis for: '{user_message}'")
         
         # Get available tools
         available_tools = self.mcp_client.get_available_tools()
         tools_description = self._format_tools_for_prompt(available_tools)
         
-        logger.info(f"🧠 [INTENT] Available tools count: {len(available_tools)}")
+        logger.info(f"[INTENT] Available tools count: {len(available_tools)}")
         
         # Create intent analysis prompt with improved context awareness
         prompt = f"""Analyze this user request and determine if AWS tools are needed.
@@ -298,19 +297,19 @@ IMPROVED EXAMPLES:
 
 JSON response:"""
 
-        logger.info(f"🧠 [INTENT] Prompt length: {len(prompt)} chars")
-        logger.info(f"🧠 [INTENT] Calling Bedrock for intent analysis...")
+        logger.info(f"[INTENT] Prompt length: {len(prompt)} chars")
+        logger.info(f"[INTENT] Calling Bedrock for intent analysis...")
 
         try:
             response = await self._call_bedrock(prompt, max_tokens=500)
             
-            logger.info(f"🧠 [INTENT] Raw Bedrock response: {response}")
+            logger.info(f"[INTENT] Raw Bedrock response: {response}")
             
             # Extract JSON from response
             json_match = re.search(r'\{.*\}', response, re.DOTALL)
             if json_match:
                 json_str = json_match.group()
-                logger.info(f"🧠 [INTENT] Extracted JSON: {json_str}")
+                logger.info(f"[INTENT] Extracted JSON: {json_str}")
                 
                 parsed_intent = json.loads(json_str)
                 logger.info(f"✅ [INTENT] Parsed intent successfully: {parsed_intent}")

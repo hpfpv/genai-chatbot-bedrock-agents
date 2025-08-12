@@ -8,7 +8,7 @@ A next-generation AI-powered assistant that leverages the **Model Context Protoc
 
 - 🔌 **Official AWS Labs MCP Servers** - Standardized AWS CLI and documentation access
 - 🔐 **Enterprise AWS SSO Authentication** - Secure, multi-profile management
-- 🧠 **Amazon Bedrock Integration** - Advanced Claude models for natural language processing
+- **Amazon Bedrock Integration** - Advanced Claude models for natural language processing
 - 🌐 **Professional Web Interface** - Enhanced Streamlit UI with real-time monitoring
 - 🔍 **Live Debug Monitoring** - Real-time system status and operation tracking
 - 🌍 **Multi-language Support** - English and French localization
